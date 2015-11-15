@@ -14,7 +14,8 @@
 
   :test-paths ["test/clj" "test/cljs"]
 
-  :plugins [[lein-ring "0.9.7"]] ; Simplifies running ring server. How to run ring server without this plugin? Only REPL?
+  :plugins [[lein-ring "0.9.7"] ; Simplifies running ring server. How to run ring server without this plugin? Only REPL?
+            [lein-autoexpect "1.7.0"]]
 
   :ring {:handler trackmytime.handler/app ; Set entry point for lein-ring plugin
          :nrepl {:start? true
